@@ -1,4 +1,4 @@
-# פתרון מטלה 2
+# פתרון מטלה 3
 
 [לינק למטלה](https://github.com/erelsgl-at-ariel/research-5783/blob/main/03-python-oop/homework.pdf)
 
