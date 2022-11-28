@@ -4,7 +4,7 @@
 
 [שאלה 1(א'+ב')](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/blob/main/Ex5/Question1.ipynb)
 
-[שאלה 2](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/Ex5/blob/main/Ex5/Question2.ipynb)
+[שאלה 2](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/blob/main/Ex5/Question2.ipynb)
 
 [שאלה 3](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/Ex5/blob/main/Ex5/Question3.ipynb)
 
