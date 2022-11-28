@@ -7,3 +7,18 @@
 [סיכום המאמר](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/blob/main/Ex2/Ex2.pdf)
 
 [דוגמאות הרצה](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/blob/main/Ex4/Ex4.pdf)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
