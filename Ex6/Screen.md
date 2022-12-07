@@ -1,6 +1,7 @@
 ![screen.png](screen.png)
 
 הצילום מסך הוא של הבדיקות בלי הdoctest (רק pytest) כי הצילום מסך שכולל את הכל לא מתאפשר בגלל גודל המסך.
+
 להלן מה שהתקבל בהרצה:
  ```
 (networkx-dev) nonofurbuisness@nonofurbuisness:~/Desktop/networkx/networkx/algorithms/approximation$ pytest --doctest-modules
