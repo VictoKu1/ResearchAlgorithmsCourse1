@@ -1,18 +1,74 @@
 ![screen.png](screen.png)
 
-```
-(networkx-dev) nonofurbuisness@nonofurbuisness:~/Desktop/networkx/networkx/algorithms/approximation/tests$ pytest test_social_aware_assignment_of_passengers_in_ridesharing.py 
-==================================================================== test session starts =====================================================================
-platform linux -- Python 3.9.1, pytest-7.2.0, pluggy-1.0.0
+הצילום מסך הוא של הבדיקות בלי הdoctest (רק pytest) כי הצילום מסך שכולל את הכל לא מתאפשר בגלל גודל המסך.
+להלן מה שהתקבל בהרצה:
+ ```
+(networkx-dev) nonofurbuisness@nonofurbuisness:~/Desktop/networkx/networkx/algorithms/approximation$ pytest --doctest-modules
+==================================================================================================================================================== test session starts ====================================================================================================================================================
+platform linux -- Python 3.8.10, pytest-7.2.0, pluggy-1.0.0
 rootdir: /home/nonofurbuisness/Desktop/networkx
-collected 6 items                                                                                                                                            
+plugins: cov-4.0.0
+collected 150 items                                                                                                                                                                                                                                                                                                         
 
-test_social_aware_assignment_of_passengers_in_ridesharing.py FFFFFF                                                                                    [100%]
+clustering_coefficient.py .                                                                                                                                                                                                                                                                                           [  0%]
+connectivity.py ...                                                                                                                                                                                                                                                                                                   [  2%]
+kcomponents.py .                                                                                                                                                                                                                                                                                                      [  3%]
+social_aware_assignment_of_passengers_in_ridesharing.py FF                                                                                                                                                                                                                                                            [  4%]
+traveling_salesman.py .....                                                                                                                                                                                                                                                                                           [  8%]
+tests/test_approx_clust_coeff.py ......                                                                                                                                                                                                                                                                               [ 12%]
+tests/test_clique.py ........                                                                                                                                                                                                                                                                                         [ 17%]
+tests/test_connectivity.py ..................                                                                                                                                                                                                                                                                         [ 29%]
+tests/test_distance_measures.py ........                                                                                                                                                                                                                                                                              [ 34%]
+tests/test_dominating_set.py ....                                                                                                                                                                                                                                                                                     [ 37%]
+tests/test_kcomponents.py ................                                                                                                                                                                                                                                                                            [ 48%]
+tests/test_matching.py .                                                                                                                                                                                                                                                                                              [ 48%]
+tests/test_maxcut.py .....                                                                                                                                                                                                                                                                                            [ 52%]
+tests/test_ramsey.py .                                                                                                                                                                                                                                                                                                [ 52%]
+tests/test_social_aware_assignment_of_passengers_in_ridesharing.py FFFFFF                                                                                                                                                                                                                                             [ 56%]
+tests/test_steinertree.py ....                                                                                                                                                                                                                                                                                        [ 59%]
+tests/test_traveling_salesman.py .........................................s.                                                                                                                                                                                                                                          [ 88%]
+tests/test_treewidth.py ..............                                                                                                                                                                                                                                                                                [ 97%]
+tests/test_vertex_cover.py ....                                                                                                                                                                                                                                                                                       [100%]
 
-========================================================================== FAILURES ==========================================================================
-_______________________________________ Test_social_aware_assignment_of_passengers_in_ridesharing.test_mnm_empty_graph _______________________________________
+========================================================================================================================================================= FAILURES ==========================================================================================================================================================
+______________________________________________________________________________________________________ [doctest] networkx.algorithms.approximation.social_aware_assignment_of_passengers_in_ridesharing.find_matching _______________________________________________________________________________________________________
+058     :param Opt: Optimal partition
+059     :return: A matching R_l in G_l
+060 
+061     Example
+062     >>> G = nx.Graph()
+063     >>> list_of_edges = [(1, 2), (1, 3), (1, 5), (1, 6), (2, 4), (2, 7), (3, 4), (3, 5), (3, 6), (4, 5), (4, 6), (4, 7), (5, 8), (6, 7), (6, 8)]
+064     >>> G.add_edges_from(list_of_edges)
+065     >>> l = 3
+066     >>> Opt = [[1, 2, 3], [4, 5, 6], [7, 8]]
+067     >>> find_matching(G, l, P)
+UNEXPECTED EXCEPTION: NameError("name 'P' is not defined")
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/doctest.py", line 1336, in __run
+    exec(compile(example.source, filename, "single",
+  File "<doctest networkx.algorithms.approximation.social_aware_assignment_of_passengers_in_ridesharing.find_matching[5]>", line 1, in <module>
+NameError: name 'P' is not defined
+/home/nonofurbuisness/Desktop/networkx/networkx/algorithms/approximation/social_aware_assignment_of_passengers_in_ridesharing.py:67: UnexpectedException
+_____________________________________________________________________________________________________ [doctest] networkx.algorithms.approximation.social_aware_assignment_of_passengers_in_ridesharing.match_and_merge ______________________________________________________________________________________________________
+028     :param G: Graph
+029     :param k: Number of passengers
+030     :return: A partition P of G of all matched sets
+031     
+032     Example where G={(v1,v2),(v2,v3),(v3,v4),(v4,v5),(v4,v6)} and k=4:
+033     >>> G = nx.Graph()
+034     >>> list_of_edges = [(1, 2), (2, 3), (3, 4), (4, 5), (4, 6)]
+035     >>> G.add_edges_from(list_of_edges)
+036     >>> k = 4
+037     >>> match_and_merge(G, k)
+Expected:
+    [[1, 2], [3, 4, 5, 6]]
+Got:
+    [1]
 
-self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_passengers_in_ridesharing.Test_social_aware_assignment_of_passengers_in_ridesharing object at 0x7fce6d12d820>
+/home/nonofurbuisness/Desktop/networkx/networkx/algorithms/approximation/social_aware_assignment_of_passengers_in_ridesharing.py:37: DocTestFailure
+______________________________________________________________________________________________________________________ Test_social_aware_assignment_of_passengers_in_ridesharing.test_mnm_empty_graph _______________________________________________________________________________________________________________________
+
+self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_passengers_in_ridesharing.Test_social_aware_assignment_of_passengers_in_ridesharing object at 0x7fa0b7921fa0>
 
     def test_mnm_empty_graph(self):
         G = nx.Graph()
@@ -22,10 +78,10 @@ E       assert [1] == []
 E         Left contains one more item: 1
 E         Use -v to get more diff
 
-test_social_aware_assignment_of_passengers_in_ridesharing.py:38: AssertionError
-_______________________________________ Test_social_aware_assignment_of_passengers_in_ridesharing.test_fm_empty_graph ________________________________________
+tests/test_social_aware_assignment_of_passengers_in_ridesharing.py:40: AssertionError
+_______________________________________________________________________________________________________________________ Test_social_aware_assignment_of_passengers_in_ridesharing.test_fm_empty_graph _______________________________________________________________________________________________________________________
 
-self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_passengers_in_ridesharing.Test_social_aware_assignment_of_passengers_in_ridesharing object at 0x7fce6d12d9a0>
+self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_passengers_in_ridesharing.Test_social_aware_assignment_of_passengers_in_ridesharing object at 0x7fa0b78dc820>
 
     def test_fm_empty_graph(self):
         G = nx.Graph()
@@ -36,10 +92,10 @@ E       assert [1] == []
 E         Left contains one more item: 1
 E         Use -v to get more diff
 
-test_social_aware_assignment_of_passengers_in_ridesharing.py:44: AssertionError
-______________________________________________ Test_social_aware_assignment_of_passengers_in_ridesharing.test_1 ______________________________________________
+tests/test_social_aware_assignment_of_passengers_in_ridesharing.py:46: AssertionError
+_____________________________________________________________________________________________________________________________ Test_social_aware_assignment_of_passengers_in_ridesharing.test_1 ______________________________________________________________________________________________________________________________
 
-self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_passengers_in_ridesharing.Test_social_aware_assignment_of_passengers_in_ridesharing object at 0x7fce6d12db50>
+self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_passengers_in_ridesharing.Test_social_aware_assignment_of_passengers_in_ridesharing object at 0x7fa0b78dcb80>
 
     def test_1(self):
         G, k = case_1()
@@ -50,10 +106,10 @@ E         At index 0 diff: 1 != [1, 2]
 E         Right contains one more item: [3, 4, 5, 6]
 E         Use -v to get more diff
 
-test_social_aware_assignment_of_passengers_in_ridesharing.py:49: AssertionError
-______________________________________________ Test_social_aware_assignment_of_passengers_in_ridesharing.test_2 ______________________________________________
+tests/test_social_aware_assignment_of_passengers_in_ridesharing.py:51: AssertionError
+_____________________________________________________________________________________________________________________________ Test_social_aware_assignment_of_passengers_in_ridesharing.test_2 ______________________________________________________________________________________________________________________________
 
-self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_passengers_in_ridesharing.Test_social_aware_assignment_of_passengers_in_ridesharing object at 0x7fce6d12dd00>
+self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_passengers_in_ridesharing.Test_social_aware_assignment_of_passengers_in_ridesharing object at 0x7fa0b78dcd60>
 
     def test_2(self):
         G, k = case_2()
@@ -63,10 +119,10 @@ E       assert [1] == [[1, 2, 3]]
 E         At index 0 diff: 1 != [1, 2, 3]
 E         Use -v to get more diff
 
-test_social_aware_assignment_of_passengers_in_ridesharing.py:55: AssertionError
-______________________________________________ Test_social_aware_assignment_of_passengers_in_ridesharing.test_3 ______________________________________________
+tests/test_social_aware_assignment_of_passengers_in_ridesharing.py:57: AssertionError
+_____________________________________________________________________________________________________________________________ Test_social_aware_assignment_of_passengers_in_ridesharing.test_3 ______________________________________________________________________________________________________________________________
 
-self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_passengers_in_ridesharing.Test_social_aware_assignment_of_passengers_in_ridesharing object at 0x7fce6d12deb0>
+self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_passengers_in_ridesharing.Test_social_aware_assignment_of_passengers_in_ridesharing object at 0x7fa0b78dcf40>
 
     def test_3(self):
         G, k = case_3()
@@ -77,10 +133,10 @@ E         At index 0 diff: 1 != [1, 2, 3]
 E         Right contains 2 more items, first extra item: [4, 5, 6]
 E         Use -v to get more diff
 
-test_social_aware_assignment_of_passengers_in_ridesharing.py:61: AssertionError
-______________________________________________ Test_social_aware_assignment_of_passengers_in_ridesharing.test_4 ______________________________________________
+tests/test_social_aware_assignment_of_passengers_in_ridesharing.py:63: AssertionError
+_____________________________________________________________________________________________________________________________ Test_social_aware_assignment_of_passengers_in_ridesharing.test_4 ______________________________________________________________________________________________________________________________
 
-self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_passengers_in_ridesharing.Test_social_aware_assignment_of_passengers_in_ridesharing object at 0x7fce6d13f0a0>
+self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_passengers_in_ridesharing.Test_social_aware_assignment_of_passengers_in_ridesharing object at 0x7fa0a91a0160>
 
     def test_4(self):
         # For each n between 5 and 15 (inclusive), generate a clique graph with n nodes and check for 5<k≤15
@@ -91,20 +147,21 @@ self = <networkx.algorithms.approximation.tests.test_social_aware_assignment_of_
                     P = match_and_merge(G, k)
                     assert len(P) == math.ceil(math.log(n, k))
 >                   assert find_matching(G, k-1, P) in itertools.combinations(G.nodes(), k-1)
-E                   AssertionError: assert [1] in <itertools.combinations object at 0x7fce6d30f310>
-E                    +  where [1] = find_matching(<networkx.classes.graph.Graph object at 0x7fce6d115850>, (5 - 1), [1])
-E                    +  and   <itertools.combinations object at 0x7fce6d30f310> = <class 'itertools.combinations'>(NodeView((0, 1, 2, 3, 4)), (5 - 1))
+E                   AssertionError: assert [1] in <itertools.combinations object at 0x7fa09d3f4f90>
+E                    +  where [1] = find_matching(<networkx.classes.graph.Graph object at 0x7fa09d3a7c40>, (5 - 1), [1])
+E                    +  and   <itertools.combinations object at 0x7fa09d3f4f90> = <class 'itertools.combinations'>(NodeView((0, 1, 2, 3, 4)), (5 - 1))
 E                    +    where <class 'itertools.combinations'> = itertools.combinations
 E                    +    and   NodeView((0, 1, 2, 3, 4)) = NodeView((0, 1, 2, 3, 4))()
-E                    +      where NodeView((0, 1, 2, 3, 4)) = <networkx.classes.graph.Graph object at 0x7fce6d115850>.nodes
+E                    +      where NodeView((0, 1, 2, 3, 4)) = <networkx.classes.graph.Graph object at 0x7fa09d3a7c40>.nodes
 
-test_social_aware_assignment_of_passengers_in_ridesharing.py:72: AssertionError
-================================================================== short test summary info ===================================================================
-FAILED test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_mnm_empty_graph - assert [1] == []
-FAILED test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_fm_empty_graph - assert [1] == []
-FAILED test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_1 - assert [1] == [[1, 2], [3, 4, 5, 6]]
-FAILED test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_2 - assert [1] == [[1, 2, 3]]
-FAILED test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_3 - assert [1] == [[1, 2, 3], [4, 5, 6], [7, 8]]
-FAILED test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_4 - AssertionError: assert [1] in <itertools.combinations object at 0x7fce6d30f310>
-===================================================================== 6 failed in 0.25s ======================================================================
+tests/test_social_aware_assignment_of_passengers_in_ridesharing.py:74: AssertionError
+================================================================================================================================================== short test summary info ==================================================================================================================================================
+FAILED social_aware_assignment_of_passengers_in_ridesharing.py::networkx.algorithms.approximation.social_aware_assignment_of_passengers_in_ridesharing.find_matching
+FAILED social_aware_assignment_of_passengers_in_ridesharing.py::networkx.algorithms.approximation.social_aware_assignment_of_passengers_in_ridesharing.match_and_merge
+FAILED tests/test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_mnm_empty_graph - assert [1] == []
+FAILED tests/test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_fm_empty_graph - assert [1] == []
+FAILED tests/test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_1 - assert [1] == [[1, 2], [3, 4, 5, 6]]
+FAILED tests/test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_2 - assert [1] == [[1, 2, 3]]
+FAILED tests/test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_3 - assert [1] == [[1, 2, 3], [4, 5, 6], [7, 8]]
+FAILED tests/test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_4 - AssertionError: assert [1] in <itertools.combinations object at 0x7fa09d3f4f90>
 ```
