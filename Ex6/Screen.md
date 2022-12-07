@@ -1,4 +1,4 @@
-![screen.png](Ex6/screen.png)
+![screen.png](/screen.png)
 
 ```
 (networkx-dev) nonofurbuisness@nonofurbuisness:~/Desktop/networkx/networkx/algorithms/approximation/tests$ pytest test_social_aware_assignment_of_passengers_in_ridesharing.py 
