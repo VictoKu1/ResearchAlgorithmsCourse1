@@ -205,5 +205,4 @@ FAILED tests/test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_
 FAILED tests/test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_fm_3 - assert [1] in [[1, 2, 3], [4, 5, 6]]
 FAILED tests/test_social_aware_assignment_of_passengers_in_ridesharing.py::Test_social_aware_assignment_of_passengers_in_ridesharing::test_4 - AssertionError: assert [1] in <itertools.combinations object at 0x7fa86b934810>
 ========================================================= 11 failed, 141 passed, 1 skipped in 18.92s =========================================================
-
 ```
