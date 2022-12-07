@@ -2,6 +2,24 @@
 
 הצילום מסך הוא של הבדיקות בלי הפלט בדיקה המלא כי הצילום מסך שכולל את הכל לא מתאפשר בגלל גודל המסך.
 
+כלומר, בצילום מסך הופעלה הפקודה:
+```
+pytest --tb=no --doctest-modules
+```
+פירוש:
+```
+--tb=no
+```
+במצב זה pytest רץ בלי פירוטים בכלל.
+```
+--doctest-modules
+```
+מצב זה גורם לpytest לבדוק את הבדיקות של doctest.
+
+בהרצה המלאה הקוד שהורץ היה:
+```
+pytest --doctest-modules
+```
 להלן מה שהתקבל בהרצה המלאה:
  ```
 (networkx-dev) nonofurbuisness@nonofurbuisness:~/Desktop/networkx/networkx/algorithms/approximation$ pytest --doctest-modules
