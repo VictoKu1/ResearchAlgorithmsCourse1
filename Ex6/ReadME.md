@@ -12,11 +12,11 @@
 
 
 
-[סעיף א': כותרות](https://github.com/VictoKu1/networkx/blob/main/networkx/algorithms/approximation/social_aware_assignment_of_passengers_in_ridesharing.py)
+[סעיף ב': כותרות](https://github.com/VictoKu1/networkx/blob/main/networkx/algorithms/approximation/social_aware_assignment_of_passengers_in_ridesharing.py)
 
-[סעיף ב': בדיקות](https://github.com/VictoKu1/networkx/blob/main/networkx/algorithms/approximation/tests/test_social_aware_assignment_of_passengers_in_ridesharing.py)
+[סעיף ג': בדיקות](https://github.com/VictoKu1/networkx/blob/main/networkx/algorithms/approximation/tests/test_social_aware_assignment_of_passengers_in_ridesharing.py)
 
-[סעיף ג': צילום מסך](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/blob/main/Ex6/Screen.md)
+[סעיף ד': צילום מסך](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/blob/main/Ex6/Screen.md)
 
 
 
