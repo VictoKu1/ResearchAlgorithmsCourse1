@@ -6,7 +6,7 @@
 
 [שאלה 2](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/blob/main/Ex7/Question2.ipynb)
 
-[שאלה 3](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/blob/main/Ex7/Question3.ipynb)
+[שאלה 3](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/blob/main/Ex7/Question3.md)
 
 
 
