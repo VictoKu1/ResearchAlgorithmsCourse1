@@ -12,7 +12,7 @@
 
 
 
-[שיפורים]](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/blob/main/Ex9/Question1.ipynb)
+[שיפורים](https://github.com/VictoKu1/ResearchAlgorithmsCourse1/blob/main/Ex9/Question1.ipynb)
 
 
 
